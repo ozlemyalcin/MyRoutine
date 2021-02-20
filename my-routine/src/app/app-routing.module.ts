@@ -1,13 +1,23 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import {Routes, RouterModule} from '@angular/router';
+import { RoutineComponent } from './routine/routine.component';
+import {CategoryComponent} from './category/category.component';
+
+const routes: Routes=[
+{path:'routines', component : RoutineComponent},
+{path:'', redirectTo:'routines', pathMatch:'full'},
+{path:'routines/category/:categoryId', component:RoutineComponent}
+
+];
 
 
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  
+  
+  imports:[RouterModule.forRoot(routes)],
+  exports:[RouterModule]
 })
 export class AppRoutingModule { }
