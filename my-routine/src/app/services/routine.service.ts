@@ -18,8 +18,8 @@ export class RoutineService {
 
 
 
-    return this.http.get<Routine[]>(newPath+"?categoryId="+categoryId
-    )
+    return this.http.get<Routine[]>(newPath
+    );
     }
 
   }

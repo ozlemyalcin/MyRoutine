@@ -44,7 +44,7 @@ export class RoutineComponent implements OnInit {
 
 
 addToScore(score){
-''
+
  this.alertifyService.confirm('onfirmmesg','sucess','error');
   
   

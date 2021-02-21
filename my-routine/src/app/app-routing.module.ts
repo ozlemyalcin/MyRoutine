@@ -5,7 +5,7 @@ import { RoutineComponent } from './routine/routine.component';
 import {CategoryComponent} from './category/category.component';
 
 const routes: Routes=[
-{path:'routines', component : RoutineComponent},
+{path:'routines', component :RoutineComponent},
 {path:'', redirectTo:'routines', pathMatch:'full'},
 {path:'routines/category/:categoryId', component:RoutineComponent}
 
