@@ -18,9 +18,10 @@ export class CategoryComponent implements OnInit {
  title="Daily ";
 
   categories: Category[];
+  categoryId:number;
 
   ngOnInit() {
-    this.categoryService.getCategories().subscribe(data=>{
+    this.categoryService.getCategories(this.categoryId).subscribe(data=>{
       this.categories=data
     });
 

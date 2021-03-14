@@ -1,0 +1,44 @@
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>
+
+      </th>
+      <th>
+        Image
+      </th>
+      <th>
+        Routine Name
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Score
+      </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of routines">
+      <th>{{r.id}}</th>
+      <th>
+        <img src="{{r.imageUrl}}" width="50">
+      </th>
+      <th>{{r.name}}</th>
+      <th>{{r.desc}}</th>
+
+      <th>{{r.score}}</th>
+
+
+
+
+      <th>
+        <button class="fa fa-trash-o" (click)="deleteRoutine(id)" style="font-size:30px; color:red; cursor:pointer;"></button>
+
+      </th>
+    </tr>
+
+  </tbody>
+
+</table>

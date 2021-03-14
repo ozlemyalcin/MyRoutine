@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
-import alertify from 'alertifyjs';
+//import alertify from 'alertifyjs';
+declare let alertify: any;
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AlertifyService {
 
   constructor() { }
 
-  confirm(confirmMessage:string, successMessage:string,errorMessage){
+  
+    
+  confirmMessage(confirmMessage:string, successMessage:string, errorMessage:string){
     alertify.confirm(confirmMessage,
     function(){
       alertify.success(successMessage);
@@ -16,6 +17,7 @@ export class AlertifyService {
     function(){
       alertify.error(errorMessage);
     });
-    
+
+   }
   }
-}
+
